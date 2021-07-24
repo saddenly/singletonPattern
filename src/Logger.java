@@ -1,13 +1,15 @@
 import java.util.Date;
 
 public class Logger {
-    private static final Logger logger = new Logger();
+    private static Logger logger;
     private int num = 1;
 
     private Logger() {
     }
 
     public static Logger getInstance() {
+        if (logger == null)
+            logger = new Logger();
         return logger;
     }
 
