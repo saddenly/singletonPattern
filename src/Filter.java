@@ -1,7 +1,12 @@
 import java.util.ArrayList;
 import java.util.List;
 
-public record Filter(int boundary) {
+public class Filter {
+    private final int boundary;
+
+    public Filter(int boundary) {
+        this.boundary = boundary;
+    }
 
     public void filterOut(List<Integer> source) {
         int counter = 0;
